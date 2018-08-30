@@ -1,0 +1,10 @@
+name: csv
+
+endpoints:
+  dump:
+    description: Dump data from given class (data model)
+    inputs:
+      properties:
+        classNamename:
+          type: string
+          description: Name of the class to dump
