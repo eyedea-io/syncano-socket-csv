@@ -3,6 +3,7 @@ name: csv
 endpoints:
   dump:
     description: Dump data from given class (data model)
+    private: true
     inputs:
       properties:
         classNamename:

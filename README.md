@@ -34,4 +34,6 @@ const params = {
 }
 const csvBooks = await s.get('csv/dump', params)
 
+// '"name","age"\n"mcj",18\n"nik",22'
+
 ```
