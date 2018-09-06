@@ -1,6 +1,6 @@
 {
   "name": "@eyedea-sockets/csv",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Syncano Socket for CSV generation",
   "repository": "https://github.com/eyedea-io/syncano-socket-csv.git",
   "public": true,
