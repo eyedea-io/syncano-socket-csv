@@ -27,12 +27,9 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: v6-dependencies-{{ checksum "package.json" }}
-
-      - save_cache:
-          paths:
             - .dist/node_modules
-          key: v6-dependencies-{{ checksum ".dist/package.json" }}
+            - .dist/package-lock.json
+          key: v6-dependencies-{{ checksum "package.json" }}
 
       - save_cache:
           key: v6-repo-{{ .Environment.CIRCLE_SHA1 }}
