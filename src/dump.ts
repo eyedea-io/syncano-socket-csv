@@ -14,23 +14,20 @@ class Endpoint extends S.Endpoint {
   ) {
     let resp
 
-    if (args.className === 'user') {
-      resp = users.take(500)
-    } else {
-      resp = data[args.className].take(500)
-    }
+    resp = (args.className === 'user')
+      ? users.take(500)
+      : data[args.className].take(500)
 
     if (args.query) {
       resp.where(...args.query)
     }
 
-    if (args.objects && args.objects.length > 0) {
-      resp = await resp.find(args.objects)
-    } else {
-      resp = await resp.list()
-    }
+    resp = (args.objects && args.objects.length > 0)
+      ? await resp.find(args.objects)
+      : await resp.list()
 
     const responseData = resp.length !== 0 ? json2csv.parse(resp) : ''
+
     return response(responseData, 200, 'text/csv')
   }
 }
