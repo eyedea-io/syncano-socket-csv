@@ -9,3 +9,19 @@ endpoints:
         classNamename:
           type: string
           description: Name of the class to dump
+        objects:
+          type: array
+          items:
+            type: number
+            description: ID of the objects to take
+        query:
+          type: array
+          items:
+            - type: string
+              description: Field to query
+            - type: string
+              description: Operator e.g. 'eq'
+            - type:
+                - number
+                - string
+              description: List of query arguments e.g. ['id', 'eq', '100']
