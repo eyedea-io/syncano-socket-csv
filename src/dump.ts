@@ -5,6 +5,7 @@ interface Args {
   className: string
   objects: number[]
   query: string[]
+  fields: string[]
 }
 
 class Endpoint extends S.Endpoint {
@@ -20,6 +21,10 @@ class Endpoint extends S.Endpoint {
 
     if (args.query) {
       resp.where(...args.query)
+    }
+
+    if (args.fields) {
+      resp.fields(args.fields)
     }
 
     resp = (args.objects && args.objects.length > 0)
