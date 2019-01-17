@@ -25,3 +25,8 @@ endpoints:
                 - number
                 - string
               description: List of query arguments e.g. ['id', 'eq', '100']
+        fields:
+          type: array
+          items:
+            - type: string
+              description: Fields
