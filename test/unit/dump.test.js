@@ -4,7 +4,7 @@ import {run} from '@syncano/test'
 describe('simple dump', function () {
   it('simple test', async () => {
 
-    require('@syncano/core').__setMocks({
+    require('@syncano/core').Core.__setMocks({
       data: {
         sampleClass: {
           take: () => ({

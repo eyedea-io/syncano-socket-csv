@@ -14,7 +14,7 @@ class Endpoint extends S.Endpoint {
     const {fields, entry} = args
 
     const json2csvParser = new Parser({fields})
-    const responseData = json2csvParser.parse(entry)
+    const responseData = entry.length ? json2csvParser.parse(entry) : ''
 
     return response(responseData, 200, 'text/csv')
   }
