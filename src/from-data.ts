@@ -1,8 +1,9 @@
 import * as S from '@eyedea/syncano'
-import json2csv from 'json2csv'
+import {Parser} from 'json2csv'
 
 interface Args {
-  data: object
+  fields: string[],
+  entry: Array<any>
 }
 
 class Endpoint extends S.Endpoint {
@@ -10,7 +11,10 @@ class Endpoint extends S.Endpoint {
     {response}: S.Core,
     {args}: S.Context<Args>
   ) {
-    const responseData = json2csv.parse(args.data)
+    const {fields, entry} = args
+
+    const json2csvParser = new Parser({fields})
+    const responseData = json2csvParser.parse(entry)
 
     return response(responseData, 200, 'text/csv')
   }

@@ -1,6 +1,6 @@
 {
   "name": "@eyedea-sockets/csv",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Syncano Socket for CSV generation",
   "repository": "https://github.com/eyedea-io/syncano-socket-csv.git",
   "public": true,
@@ -17,8 +17,8 @@
     "@syncano/cli": "0.13.0-alpha.f6ea95d4"
   },
   "dependencies": {
-    "@eyedea/syncano": "0.2.0",
-    "json2csv": "^4.2.1"
+    "@eyedea/syncano": "0.4.4",
+    "json2csv": "4.4.1"
   },
   "scripts": {
     "build": "npm run build:src && npm run build:env",

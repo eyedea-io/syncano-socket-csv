@@ -35,6 +35,9 @@ endpoints:
     private: true
     inputs:
       properties:
-        data:
-          type: object
-          description: Data to parse
+        fields:
+          type: array
+          description: table fields
+        entry:
+          type: array
+          description: entry data
