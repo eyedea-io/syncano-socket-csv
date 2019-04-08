@@ -30,3 +30,11 @@ endpoints:
           items:
             - type: string
               description: Fields
+  from-data:
+    description: Create csv from send data
+    private: true
+    inputs:
+      properties:
+        data:
+          type: object
+          description: Data to parse
