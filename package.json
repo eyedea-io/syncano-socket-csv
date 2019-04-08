@@ -14,11 +14,11 @@
     "csv"
   ],
   "peerDependencies": {
-    "@syncano/cli": "0.13.0-alpha.f6ea95d4"
+    "@syncano/cli": "0.15.0"
   },
   "dependencies": {
     "@eyedea/syncano": "0.4.4",
-    "json2csv": "4.4.1"
+    "json2csv": "^4.4.1"
   },
   "scripts": {
     "build": "npm run build:src && npm run build:env",
