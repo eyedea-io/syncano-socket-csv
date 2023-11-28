@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@eyedea/syncano": "0.4.4",
-    "json2csv": "^4.4.1"
+    "json2csv": "^4.3.5"
   },
   "scripts": {
     "build": "npm run build:src && npm run build:env",
